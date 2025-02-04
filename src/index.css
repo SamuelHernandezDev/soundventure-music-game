@@ -1,0 +1,47 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Imagen de fondo con efecto de foco */
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  
+  /* Gradiente oscuro radial combinado con imagen de fondo */
+  background: radial-gradient(
+      circle, 
+      rgba(0, 0, 0, 0) 20%, /* Centro claro */
+      rgba(0, 0, 0, 0.644) 60%, /* Oscurecimiento intermedio */
+      rgb(0, 0, 0) 100% /* Bordes oscuros */
+  ), 
+  url('src/assets/images/AnimeFondoPiano.png'); 
+  
+  background-size: cover; /* Asegura que la imagen cubra toda el área */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita */
+}
+
+/* Estilos específicos para el esquema de color claro */
+@media (prefers-color-scheme: light) {
+  :root {
+      color: #213547;
+      background-color: #ffffff;
+  }
+  a:hover {
+      color: #747bff;
+  }
+  button {
+      background-color: #f9f9f9;
+  }
+}

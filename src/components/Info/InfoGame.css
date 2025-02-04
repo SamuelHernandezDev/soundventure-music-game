@@ -1,0 +1,29 @@
+.game-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tecla-display,
+#nota-display, #clave-actual{
+    font-family: "Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
+    font-size: 0.9rem;
+    padding: 10px;                   /* Añadir espacio interno */
+    background-color: rgb(34, 28, 44); /* Fondo oscuro semitransparente */
+    border-radius: 10px;             /* Bordes redondeados */
+    color: #7f7f7f;                    /* Texto blanco */
+    text-align: center;              /* Centrar el texto */
+    display: inline-block;           /* Permitir que el bloque se ajuste al contenido */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
+    margin: 10px;                    /* Margen para separación */
+    margin-top: 30px;
+}
+
+/* Efecto de transición suave para los elementos */
+#informacion {
+    transition: opacity 0.3s ease;
+}
+
+#informacion:hover {
+    opacity: 0.7;
+}

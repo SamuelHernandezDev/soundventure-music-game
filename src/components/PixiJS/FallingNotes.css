@@ -1,0 +1,21 @@
+.notes-canvas-container {
+    perspective: 800px; /* Ajustar perspectiva para efecto 3D */
+    transform-style: preserve-3d; /* Mantener el efecto 3D para los hijos */
+  
+    
+  }
+  
+  .canvas-stage {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    width: 100%; /* Ajustar al 100% del contenedor */
+    height: 100%; /* Ajustar al 100% del contenedor */
+    transform: rotateX(30deg);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 35px rgba(255, 255, 255, 0.6); /* Sombra para resaltar */
+    background-color: rgba(0, 0, 0, 0.452);
+    backdrop-filter: blur(10px);
+  }
+  

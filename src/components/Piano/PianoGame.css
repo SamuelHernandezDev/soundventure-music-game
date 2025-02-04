@@ -1,0 +1,83 @@
+.piano-container {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    perspective: 800px; /* Ajustar perspectiva para efecto 3D */
+}
+
+.piano-keys-list {
+    list-style-type: none;
+    box-shadow: 0px 0px 35px rgba(255, 255, 255, 0.6); /* Sombra para resaltar */
+    background-color: rgba(0, 0, 0, 0.452);
+    display: flex;
+    justify-content: center;
+    transform: rotateX(30deg);
+    transform-style: preserve-3d; /* Mantener el efecto 3D para los hijos */
+    padding: 0;
+    margin: 0;
+}
+.piano-keys-list::marker {
+    content: ''; /* Asegúrate de que no se muestre nada como marcador */
+}
+
+
+/* Estilo para las teclas individuales */
+.piano-keys {
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: bottom; /* Pivotar desde la parte inferior */
+}
+
+.white-key {
+    width: 1.5rem; /* Escalado del 30% de 5rem */
+    height: 6rem;  /* Escalado del 30% de 20rem */
+    border-radius: 3px;
+    border: 1px solid #ffffff;
+    background-color: rgb(209, 200, 190);
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease; /* Transición para el borde neón */
+    transform: translateX(0); /* Mantenerlas planas en el espacio 3D */
+    z-index: 1;
+}
+
+/* Borde de neón para las teclas negras */
+.black-key {
+    width: 0.6rem;  /* Escalado del 30% de 2rem */
+    height: 4rem;   /* Escalado del 30% de 13rem */
+    border-radius: 2px;
+    background-color: rgb(46, 46, 46);
+    border: 1px solid #000000;
+    z-index: 2;
+    margin: 0 -0.3rem 0 -0.3rem; /* Ajuste de posición */
+    transition: box-shadow 0.3s ease; /* Transición para el borde neón */
+    transform: translateX(0px);
+}
+
+/* Separacion entre octavas y E/F */
+.Edge-key {
+    width: 0.6rem;  /* Escalado del 30% de 2rem */
+    height: 4rem;   /* Escalado del 30% de 13rem */
+    border: 0.1px solid #00000000;
+    z-index: 1;
+    margin: 0 -0.3rem 0 -0.3rem; /* Ajuste de posición */
+}
+
+/* Estilo para las teclas blancas presionadas */ 
+.white-key.pressed {
+    border: 1px solid #00000065;
+    z-index: 1;
+    background-color: rgba(90, 38, 100);
+    box-shadow: 0 0 5px 3px #d400ff;
+    transform: rotateX(-2deg);
+    transform: rotateZ(-0.5deg);
+ }
+ 
+ /* Estilo para las teclas negras presionadas */ 
+ .black-key.pressed {
+    border: 1px solid #414040;
+    z-index: 2;
+    background-color: rgb(90, 38, 100);
+    box-shadow: 0 0 5px 3px #d400ff;
+ }
+ 

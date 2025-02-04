@@ -1,0 +1,159 @@
+/* Navbar container */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center;
+    padding: 20px 20px; /* Aumenta el padding para darle más altura */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.555)); /* Más oscuro y extendido */
+    backdrop-filter: blur(10px); /* Aumenta el desenfoque */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para navegadores basados en WebKit */
+    transition: all 0.3s ease-in-out;
+    height: 50px; /* Ajusta la altura según el contenido */
+  }
+  
+  /* Aumentar la altura del fondo y el efecto */
+  .navbar::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 30px; /* Extiende el fondo más hacia abajo */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0)); /* Degradado adicional */
+    z-index: -1; /* Asegura que no cubra otros elementos */
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex; /* Asegura que los elementos dentro de .logo estén alineados horizontalmente */
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    margin-right: auto; /* Empuja el logo hacia la izquierda */
+  }
+  
+  /* Logo enlace */
+  .logo-link {
+    display: flex; /* Alinea el texto y el icono horizontalmente */
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .logo-link:hover {
+    transform: scale(1.1);
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .logo-text {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: white;
+    position: relative;
+  }
+  
+  .logo-text::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%; /* Inicializa el subrayado con el ancho completo */
+    height: 2px;
+    background-color: #df7819;
+    transition: width 0.3s ease; /* Animación para el ancho */
+  }
+  
+  /* Hover: elimina el subrayado */
+  .logo-text:hover::after {
+    width: 0; /* Hace que el subrayado desaparezca al hacer hover */
+  }
+  
+  
+
+  /* Navigation links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espacio entre opciones */
+    margin: 0;
+    padding: 0;
+    margin-right: auto; /* Empuja las opciones de navegación hacia la izquierda */
+  }
+  
+  /* Enlace de navegación */
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  /* Efecto hover */
+  .nav-links a:hover {
+    color: #df7819;
+  }
+
+  /* Navigation link items */
+   .nav-links li {
+    position: relative;
+  }
+  
+  /* Efecto de subrayado animado */
+  .nav-links li::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #df7819;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links li:hover::after {
+    width: 100%;
+  }
+  
+/* Contenedor del icono de configuración */
+  .config-icon {
+    cursor: pointer;
+    margin-right: 60px; /* Ajusta el margen derecho para evitar el desbordamiento */
+  }
+  
+  /* Estilo del reproductor Lottie */
+  .player {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .player:hover {
+    opacity: 0.9;
+    transform: scale(1.4);
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .logo {
+      left: 20px; /* Reduce el margen para pantallas pequeñas */
+    }
+  
+    .logo img {
+      height: 30px;
+    }
+  }
+  

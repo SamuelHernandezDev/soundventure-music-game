@@ -1,0 +1,53 @@
+/* Centrar el contenedor principal en la página */
+.sheetgame-wrapper {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    height: 95vh; /* Ocupa toda la altura de la ventana */
+    flex-direction: column; /* Apilar los elementos verticalmente */
+    text-align: center; /* Centrar el texto de todo */
+}
+
+.sheetgame-container {
+    display: flex;
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    justify-content: flex-end; /* Alinea los elementos hacia abajo */
+    width: 90%; /* O ajusta según el tamaño que quieras */
+    max-width: 1200px; /* Límite máximo de ancho */
+    height: 100%; /* Ajusta para ocupar toda la altura */
+}
+
+.falling-notes-custom {
+    position: relative; /* Cambiar a relative */
+    z-index: 1;
+    margin-bottom: -9px; /* Ajustar para que el piano cubra ligeramente */
+}
+
+.piano-custom {
+    position: relative; /* Cambiar a relative */
+    z-index: 2;
+    
+}
+
+.control-Game {
+margin-top: 20px;
+    
+}
+
+/* Estilo opcional para Info, para que esté debajo y alineado */
+.info-custom {
+    margin-top: 40px; /* Separación adicional para el bloque de Info */
+    text-align: center;
+    width: 100%;
+}
+
+.notes-canvas-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+ 
+  
+  

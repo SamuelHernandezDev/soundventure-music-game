@@ -1,0 +1,11 @@
+/* Estilo del reproductor Lottie */
+.player {
+    width: 30px;
+    height: 30px;                                                        
+    transition: all 0.3s ease; /* Transición más completa */
+}
+
+.player:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
