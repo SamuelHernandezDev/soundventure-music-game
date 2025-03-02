@@ -1,0 +1,152 @@
+¡Genial! Te daré los pasos para cada una de estas opciones en **Visual Studio Code** usando Git. 🚀
+
+---
+
+# **📌 1. Subir Cambios al Repositorio (GitHub)**
+Cada vez que hagas cambios en tu código y quieras subirlos:
+
+1️⃣ **Ver el estado de los cambios**  
+Abre la terminal en VS Code y ejecuta:
+
+```bash
+git status
+```
+Esto te mostrará los archivos modificados.
+
+2️⃣ **Agregar solo archivos específicos (opcional)**  
+Si no quieres agregar todos los cambios, selecciona archivos específicos:
+
+```bash
+git add nombre-del-archivo
+```
+
+Si quieres agregar **todos los cambios**:
+
+```bash
+git add .
+```
+
+3️⃣ **Hacer un commit con un mensaje descriptivo**  
+```bash
+git commit -m "Descripción del cambio realizado"
+```
+
+4️⃣ **Subir cambios a GitHub**  
+```bash
+git push
+```
+
+---
+
+# **📌 2. Regresar a un Commit Anterior (Sin Perder Todo el Trabajo)**
+Si necesitas deshacer algunos cambios sin perder todo, tienes varias opciones.
+
+### **A) Deshacer Cambios No Confirmados (`git restore`)**
+Si modificaste archivos pero **no hiciste commit**, puedes restaurarlos:
+
+1️⃣ **Ver los cambios modificados:**  
+```bash
+git status
+```
+
+2️⃣ **Restaurar un archivo en particular:**  
+```bash
+git restore nombre-del-archivo
+```
+
+3️⃣ **Restaurar todos los archivos:**  
+```bash
+git restore .
+```
+
+---
+
+### **B) Regresar un Archivo a un Commit Anterior (`git checkout`)**
+Si ya hiciste un commit y quieres recuperar solo un archivo sin afectar todo el código:
+
+1️⃣ **Ver el historial de commits:**  
+```bash
+git log --oneline
+```
+Busca el ID del commit al que quieres regresar (ejemplo: `a1b2c3d`).
+
+2️⃣ **Restaurar solo un archivo a ese commit:**  
+```bash
+git checkout a1b2c3d -- nombre-del-archivo
+```
+
+3️⃣ **Confirmar los cambios:**  
+```bash
+git add nombre-del-archivo
+git commit -m "Restaurado archivo desde commit anterior"
+git push
+```
+
+---
+
+### **C) Revertir un Commit (Sin Eliminarlo)**
+Si ya subiste un commit pero quieres deshacerlo sin perder el historial:
+
+1️⃣ **Ver el historial de commits:**  
+```bash
+git log --oneline
+```
+
+2️⃣ **Revertir el commit (crea un nuevo commit que lo cancela):**  
+```bash
+git revert ID_DEL_COMMIT
+```
+
+3️⃣ **Confirmar los cambios y subir a GitHub:**  
+```bash
+git push
+```
+
+---
+
+# **📌 3. Subir Solo los Cambios y No Todo el Proyecto**
+Git **solo sube los archivos modificados**, pero puedes asegurarte de hacerlo correctamente.
+
+1️⃣ **Verifica los cambios pendientes:**  
+```bash
+git status
+```
+
+2️⃣ **Si hay archivos que NO quieres subir, agrégales a `.gitignore`**  
+Abre el archivo `.gitignore` y añade los archivos o carpetas que quieres ignorar:
+
+```
+# Ignorar archivos específicos
+.env
+node_modules/
+dist/
+```
+
+3️⃣ **Agrega solo los archivos que quieres subir:**  
+```bash
+git add nombre-del-archivo
+git commit -m "Subiendo solo este archivo"
+git push
+```
+
+---
+
+## **📌 Resumen Rápido de Comandos**
+| Acción | Comando |
+|--------|---------|
+| Subir cambios | `git add .` → `git commit -m "mensaje"` → `git push` |
+| Ver historial de commits | `git log --oneline` |
+| Restaurar archivo sin commit | `git restore nombre-del-archivo` |
+| Restaurar archivo a commit anterior | `git checkout ID_COMMIT -- nombre-del-archivo` |
+| Revertir un commit sin eliminarlo | `git revert ID_COMMIT` |
+| Subir solo ciertos archivos | `git add nombre-del-archivo` → `git commit -m "mensaje"` → `git push` |
+
+---
+
+### 🚀 **Conclusión**
+- Si hiciste cambios pero **no los confirmaste**, usa `git restore`.
+- Si ya hiciste un **commit**, pero solo quieres regresar un archivo, usa `git checkout ID_COMMIT -- archivo`.
+- Si **subiste un commit erróneo**, usa `git revert` en lugar de borrar todo.
+- Git **nunca sube todo el proyecto**, solo los archivos modificados. Asegúrate de usar `.gitignore` para evitar archivos innecesarios.
+
+📌 **¿Necesitas ayuda con algún paso en particular?** Dímelo y lo resolvemos juntos. 😊

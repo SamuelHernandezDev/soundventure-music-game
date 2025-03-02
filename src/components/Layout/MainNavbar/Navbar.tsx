@@ -40,11 +40,11 @@ const Navbar = () => {
       </div>
       {/* Opciones de navegación */}
       <ul className="nav-links">
-        <li><Link to="/">Lobby</Link></li>
-        <li><Link to="/sheet-Game">SheetGame</Link></li>
+        {/* <li><Link to="/">Lobby</Link></li>*/}
         <li><Link to="/sheet-music">SheetMusic</Link></li>
-        <li><Link to="/sheet-type">SheetType</Link></li>
-        <li><Link to="/locker">Locker</Link></li>
+        <li><Link to="/sheet-Game">SheetLearn</Link></li>
+        {/* <li><Link to="/sheet-type">SheetType</Link></li>*/}
+        {/* <li><Link to="/locker">Locker</Link></li>*/}
         <li><Link to="/dashboard">Dashboard</Link></li>
       </ul>
 
