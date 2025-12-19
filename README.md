@@ -1,7 +1,7 @@
 # SoundVenture – Music Game 🎮🎹
 
 <img width="1679" height="913" alt="image" src="https://github.com/user-attachments/assets/0150914a-bbc7-48fa-9132-a829b8ed12cb" />
-<img width="1679" height="1049" alt="image" src="https://github.com/user-attachments/assets/080e17b7-86e6-4a37-9a19-eea2ec75508c" />
+<img width="1679" height="1049" alt="image" src="https://github.com/user-attachments/assets/e6b829db-1783-4e2e-a1c3-50df7d2872e9" />
 
 ## Descripción
 
